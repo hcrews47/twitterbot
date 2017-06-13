@@ -43,7 +43,11 @@ for(i in URL){
   if(parsed$Response == "False"){
   } else {
     rt = parsed$Ratings
-    if(length(rt) == 0){}else if(rt[1,1] == "Rotten Tomatoes"){
+    if(length(rt) == 0){
+      rot = 'NA'
+      meta = 'NA'
+      imdb = 'NA'
+    }else if(rt[1,1] == "Rotten Tomatoes"){
       rot = rt[1,2]
       meta = rt[2,2]
       imdb = rt[3,2]
